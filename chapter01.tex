@@ -3,69 +3,82 @@
 % !TEX spellcheck = en-US
 %%=========================================
 \chapter{Introduction}
-The first chapter of a well-structured thesis is always an introduction, setting the scene with background, problem description, objectives, limitations, and then looking ahead to summarize what is in the rest of the report. This is the part that readers look at first---\emph{so make sure it hooks them!}
+The single most important pedagogical task in the teaching of history at either the secondary or post-secondary level is to convey the centrality of what historians call the “historiography” or the record of historical writing on any given theme or problem.  The historiography – of, say, the American Civil War, dietary customs, democracy in Pakistan, industrialization, fashion and dress, the Cuban Revolution – constitutes what historians think they know.  Therefore, to “know” or to understand the history of anything in particular means to know its historiography.
 
 %%=========================================
-\section{Background}
-In this section, you should present the problem that you are going to investigate or analyze; why this problem is of interest; what has, so far, been done to solve the problem, and which parts of the problem that remain.
+\section{Interpretations}
+Of the many facets of understanding that the historiography provides to the student of history, the single most consequential is the diversity of interpretations that historians have proposed over the years.  An interpretation is the “solution” that a historian proposes to a particular historiographical problem.  In effect, therefore, to learn history is to learn interpretations – and at the same time, to learn how to compare, criticize, evaluate and refine them, while applying them to devise new hypothesis and counter-interpretations.
 
-{\color{red}Below, I have set up some headings (subsection titles) without a number. These are included to help you remember to cover the related issues. The headings should be removed in your final print.}
 %%=========================================
-\subsection*{Problem Formulation}
-You should define your problem in a clear an unambiguous way and explain why this is a problem, why it is of interest---and to whom. It is also important to delimit the problem area.
+\section{Typical Categories of Information}
+In building their interpretations, historians invariably deploy other closely-linked kinds of information, typically categorized in the following ways:
 %%=========================================
-\subsection*{Literature Survey}
-You should here present the main books and articles that treat problems that are similar to what  you are studying. If you,  later in your thesis, describe the ``state of the art'' -- with a detailed literature survey, you may just give a very brief survey here (approx. a quarter of a page). If this is the only literature survey, you need to go into more details. An objective of the literature survey is to show the reader that you are familiar with the main literature within your field of research -- so that you do not ``reinvent the wheel.''
+\subsection{Problem}
+This is the dilemma or question, thrown up by the historiography, that a given interpretation responds to.  The problem can most conveniently be framed as a question.  It can be very expansive or very narrow in scope.  Examples:  ``What Causes Social Revolution?'' or ``How Can the Victory of the Cuban Revolutionaries in 1959 be Explained''  One problem leads to another, so that we are also likely to ask:  ``How Did the U.S. Government Respond to the Victory of the Cuban Revolutionaries in 1959?''
+%%=========================================
+\subsection{Periods/Trends}
+These refer to historical tendencies that the historiography assigns, often in a rough way, around some range of years, e.g., industrialization, democratization, the Enlightenment, free-trade imperialism, and so on.
+%%=========================================
+\subsection{Concepts}
+These are the abstractions that historians typically apply as they seek to understand a problem, e.g., class, status, democracy, economic growth, development, human rights, absolutism, authoritarianism.  The concepts at stake will depend in part on the theories and interpretations proposed, though the concepts will also have stand-alone analytical utility.
+%%=========================================
+\subsection{Theories}
+The explanatory tools (cited or implied) that historians typically resort to in manipulating concepts and building their interpretations.  Examples include one or more of the many theories, or categories of theories, that posit explanations of the origins of social revolution, e.g., ``structuralism'' or  ``Marxism'' or theories associated with an individual investigator, e.g. Tilly's theory of collective action, Davies' J-Curve or Scott’s moral economy.
 
+\chapter{Existing Systems}
+There are not any many system which can be used by historians for performing “historiography”. There exists a few systems which depict some kind of history, but most of them focus on only a single characteristics of the history.
 
-References to literature can be given in two different ways:
+The visualizations can be divided into two categories as follows:-
+\section{Custom Built Visualiaztions}
+Custom built to highlight particular characteristic of a history. Examples can be found here \url{http://dataremixed.com/2014/02/visualizing-history/}.
+\subsection{A PRESIDENTIAL GANTT CHART}
+Visualizing Presidential History is plotted from data collected from wikipedia. It only focuses on the founding fathers, and the various wars and movements that occurred over the course of time.
+\subsection{Visualizing the History of Civilizations}
+This visualization only focuses on Civilizations that existed in past.
+
+\section{Timeline Based Visualizations}
+These visualization uses timelines to plot events over a certain periodx.
+\subsection{histography.io}
+It plots data collected from wikipedia to plot all historical events. The amount of data is overwhelming and is very difficult to customize to fit an Historians needs.
+\subsection{Timeline of Historiography and Emperors}
+This can be found here \url{http://www.tiki-toki.com/timeline/entry/489025/Timeline-of-Historiography-and-Emperors/}. It shows data for various Roman Emperors on a timeline and links to page showing information for each emperor.
+
+\chapter{Proposed System}
+Proposed system should be able to allow users represent a set histographical data into beautiful visualization. All data set should conform typical categories mentioned earlier. The visualizations built using the data set should make historians and students life easier in understanding history and deriving their own interpretations. Lets look at the application stack and proposed pages and their screenshots.
+\section{Application Stack}
 \begin{itemize}
-\item As an \emph{explicit} reference: It is shown by \citet{lundteigen08} and partly also by \citet{rausand14}  that \ldots.
-\item As an \emph{implicit} reference: It is shown \citep[e.g., see][Chap. 4]{rausand04} that \ldots.
+  \item Database - PostgreSQL
+  \item Backend - Ruby On Rails
+  \item Frontend - HTML and CSS, Jquery and Zurb Foundation
+  \item Heroku - cloud service
 \end{itemize}
-In the example above, we have used ``author-year'' references, which is the preferred format. 
-\begin{remark}
-Following agreement with your supervisor, you may also refer by numbers, for example,  [1]. To do this, open the file \texttt{ramsstyle.sty} and  comment out (by \%) the command \texttt{$\backslash$usepackage\{natbib\}} and un-comment the corresponding command \texttt{$\backslash$usepackage[numbers]\{natbib\}}.\footnote{Notice the strange way we have to write the ``backslash'' in the text. This is because the ``backslash'' is a command in \LaTeX.}
-\end{remark}
- You may include a link to the Internet in the text or in a footnote by using a command like: \url{http://www.ntnu.edu/ross}. 
+\section{Proposed pages and application screenshots}
+Single page application showing a timline at top and Event data in the middle and other typical categories shown below it. Please refer the figure below.
+\\
+\includegraphics[width=17cm,height=17cm,keepaspectratio]{fig/vistoria}
 
-When you refer to the scientific literature, you should always write in \emph{present} tense. Example: \citet{rausand04} show that \ldots.
+A carousel for browsing event in the middle of the page below timeline. Interpretations are shown at the bottom to be mapped with problems, theories and concepts. This page provides us an overiview of a histography in a single. One can also interact with timeline to browse through events.
 
-\begin{remark}
-Hyperlinks are included by the command \texttt{$\backslash$usepackage\{hyperref}\} in \texttt{ramsstyle.sty}. If you feel that the hyperlinks are disturbing when you enter the text, or want to avoid the hyperlinks in printed text, you may either comment out or edit this command in \texttt{ramsstyle.sty}.
-\end{remark}
-%%=========================================
-\subsection*{What Remains to be Done?}
-After you have defined and delimited your problem -- and presented the relevant results found in the literature within this field, you should sum up which parts of the problem that remain to be solved.
-%%=========================================
-\section{Objectives}
-The main objectives of this Master's project are
-\begin{enumerate}
-\item This is the first objective
-\item This is the second objective
-\item This is the third objective
-\item More objectives
-\end{enumerate}
+The backend database server has tables like author, concept, event, interpretation, period, problem, revolution and theory. These tables are backed by models in Backend layer. A seed script has data which populates default example of Cuban revolution. Each model is connected with intermediate tables to build connections between those models. All models have default scaffold built which can easily perform CRUD operations.
 
-The objectives shall be written as \emph{fundamental objectives} telling what to do and not \emph{means objectives} telling how to do it.
+The application is deployed on a Heroku cloud server. It has out-of-box integration with Ruby On Rails and is easy to deploy with just one-click.
 
-All objectives shall be stated such that we, after having read the thesis, can see whether or not you have met the objective. ``To become familiar with \ldots'' is therefore not a suitable objective.
+\chapter{Future Work}
+Vistoria still needs a lot of work. Here is a list of things that should be added to the system to help improve user expierence:-
+\section{Admin section}
+For user authorization and data moderation.
 
-%%=========================================
-\section{Limitations}
-In this section you describe the limitations of your study. These may be related to the study object (physical limitations, operational limitations), to the environmental and operational conditions, to the thoroughness of the analysis, and so on.
-%%=========================================
-\section{Approach}
-Here you should describe the (scientific) approach that you will use to solve the problem and meet your objectives. You should specify the approach for each objective.
+\section{Data Entry Pages}
+For end user to be able to create Vistoria on their own.
 
-If there are any ethical problems related to your approach, these should be highlighted and discussed.
-%%=========================================
-\section{Structure of the Report}
-The rest of the report is organized as follows. Chapter 2 gives an introduction to \ldots
+\section{Getting More information on Events}
+Events can have more information that can be shown.
 
-\begin{remark}
-Notice that chapter and section headings shall be written in lowercase, but that all main words should start with a capital letter.
-\end{remark}
+\section{Comments and Notes on Events}
+Adding a comments and notes section will help users keep track histography.
 
+\section{Author pages}
+Author pages will general help potrary author's work.
 
-The report should be no longer than \underline{60 pages} in this format (+ the CV).
+\section{Multimedia Support}
+Allow facility to upload multimedia like images, video, etc to an event or any other model.
